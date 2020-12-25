@@ -7,10 +7,7 @@ export default function ComponentC(props) {
     return (
         <div style={{marginTop: 20}}>
             <p>This is Component C. Wrapped around by context provider</p>
-            <p>
-                || <br />
-                \/
-            </p>
+            <p>&#8595;</p>
             <ComponentD />
         </div>
     )

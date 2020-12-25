@@ -11,10 +11,7 @@ export default function ComponentD(props) {
         <div style={{marginTop: 20}}>
             <p>This is Component D. Consuming Context using useContext</p>
             <p> {user} - {channel}</p>
-            <p>
-                || <br />
-                \/
-            </p>
+            <p>&#8595;</p>
             <ComponentE />
         </div>
     )
