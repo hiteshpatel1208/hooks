@@ -9,18 +9,18 @@ export default function Datafetching1(props) {
     useEffect(() => {
         setTimeout(() => {
             fetch('https://jsonplaceholder.typicode.com/posts/1')
-                .then(res => res.json()
-                    .then(res => {
-                        setLoading(false);
-                        setPost(res);
-                        setErr('');
-                    })
-                    .catch(err => {
-                        setLoading(false);
-                        setPost({});
-                        setErr('Something went wrong!');
-                        console.log(err);
-                    }))
+                .then(res => res.json())
+                .then(res => {
+                    setLoading(false);
+                    setPost(res);
+                    setErr('');
+                })
+                .catch(err => {
+                    setLoading(false);
+                    setPost({});
+                    setErr('Something went wrong!');
+                    console.log(err);
+                })
         }, 2000);
     }, []);
 

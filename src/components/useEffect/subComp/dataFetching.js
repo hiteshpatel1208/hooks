@@ -15,13 +15,17 @@ export default function Datafetching(props) {
     //getting all posts on load
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(res => res.json().then(res => setPosts(res)).catch(err => console.error(err)));
+            .then(res => res.json())
+            .then(res => setPosts(res))
+            .catch(err => console.error(err));
     }, []);
 
     // fetching post based on id
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${idFromBtn}`)
-            .then(res => res.json().then(res => setPost(res)).catch(err => console.error(err)));
+            .then(res => res.json())
+            .then(res => setPost(res))
+            .catch(err => console.error(err));
     }, [idFromBtn]);
 
 

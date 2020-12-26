@@ -24,13 +24,13 @@ export default function Datafetching2(props) {
     useEffect(() => {
         setTimeout(() => {
             fetch('https://jsonplaceholder.typicode.com/posts/1')
-                .then(res => res.json()
-                    .then(res => {
-                        dispatch({ type: 'FETCH_SUCCESS', payload: res })
-                    })
-                    .catch(err => {
-                        dispatch({ type: 'FETCH_ERROR' })
-                    }))
+                .then(res => res.json())
+                .then(res => {
+                    dispatch({ type: 'FETCH_SUCCESS', payload: res })
+                })
+                .catch(err => {
+                    dispatch({ type: 'FETCH_ERROR' })
+                })
         }, 2000);
     }, []);
 
