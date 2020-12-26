@@ -9,10 +9,12 @@ export default function Parentcomponent(props) {
     const [salary, setSalary] = useState(50000);
 
     const incrementAge = useCallback(() => {
+        // returns memoised function to prevent render related to salary
         setAge(age + 1);
     }, [age]);
 
     const incrementSalary = useCallback(() => {
+        // returns memoised function to prevent render related to age
         setSalary(salary + 1000);
     }, [salary]);
 
