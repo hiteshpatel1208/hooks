@@ -12,6 +12,7 @@ button, input[type='text'] {
   display: flex;
   margin-top: 25px;
   justify-content: center;
+  flex-flow: row wrap;
 }
 
 .hook-subcontainer {
