@@ -1,5 +1,6 @@
 import Usecallbackhook from './components/useCallback/useCallbackHook';
 import Usecontexthook from './components/useContext/useContextHook';
+import Usecustomhook from './components/useCustom/useCustomHook';
 import Useeffecthook from './components/useEffect/useEffectHook';
 import Usememohook from './components/useMemo/useMemoHook';
 import Usereducerhook from './components/useReducer/useReducerHook';
@@ -34,6 +35,10 @@ const hooks = [
     {
         type: 'ref',
         component: <Userefhook />
+    },
+    {
+        type: 'custom',
+        component: <Usecustomhook />
     }
 ];
 
